@@ -1,12 +1,12 @@
 -- CreateTable
-CREATE TABLE "User" (
-    "id" SERIAL NOT NULL,
-    "email" TEXT NOT NULL,
-    "password" TEXT NOT NULL,
-    "name" TEXT,
+CREATE TABLE `User` (
+    `id` INT AUTO_INCREMENT NOT NULL,
+    `username` VARCHAR(255) NOT NULL,
+    `password` TEXT NOT NULL,
+    `name` TEXT,
 
-    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+    CONSTRAINT `User_pkey` PRIMARY KEY (`id`)
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+CREATE UNIQUE INDEX `User_email_key` ON `User`(`username`);
