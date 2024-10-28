@@ -198,6 +198,7 @@ export default function AddTopic() {
               เลือกไฟล์
               <VisuallyHiddenInput
                 type="file"
+                accept="image/*,.pdf,.doc,.docx"
                 onChange={async (e) => {
                   setFileDoc(e.target.files as unknown as File);
                 }}
