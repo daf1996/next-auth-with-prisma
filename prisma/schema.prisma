@@ -8,6 +8,7 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  default_character_set = "utf8mb4"
 }
 
 model User {
@@ -22,10 +23,23 @@ model Document {
   department     String
   type     String
   title     String  
-  editNo     String?  
-  authorId  Int
+  editNo     Int?  @default(1)
+  author  String
   filePath String
+  docNo Int
   published Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Department {
+  id       Int     @id @default(autoincrement())
+  name String 
+  shortName String
+}
+
+model DocumentType {
+  id       Int     @id @default(autoincrement())
+  name String 
+  typeName String 
 }

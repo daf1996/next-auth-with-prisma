@@ -6,6 +6,8 @@ const UPLOAD_DIR = path.resolve(process.env.ROOT_PATH ?? "", "public/uploads");
 
 export const POST = async (req: NextRequest) => {
   const formData = await req.formData();
+  // console.log(formData);
+
   const body = Object.fromEntries(formData);
   const file = (body.file as Blob) || null;
 
@@ -28,5 +30,6 @@ export const POST = async (req: NextRequest) => {
   return NextResponse.json({
     success: true,
     name: (body.file as File).name,
+    dir: UPLOAD_DIR,
   });
 };

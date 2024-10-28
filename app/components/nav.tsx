@@ -4,7 +4,7 @@ import { LoginButton, LogoutButton } from "../auth";
 export const NavMenu = () => {
   return (
     <>
-      <nav className="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-blue-800 bg-opacity-90 sticky top-3 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999] mb-2">
+      <nav className="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-blue-800 bg-opacity-90 top-3 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999] mb-2">
         <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
           <a
             href="#"
@@ -15,16 +15,16 @@ export const NavMenu = () => {
           <div className="hidden lg:block">
             <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
               <li className="flex items-center p-1 text-sm gap-x-2 text-white">
-                <a href="/dashboard" className="flex items-center">
-                  Home
+                <a href="/pages/home" className="flex items-center">
+                  หน้าหลัก
                 </a>
               </li>
               <li className="flex items-center p-1 text-sm gap-x-2 text-white">
-                <a href="/post-topic" className="flex items-center">
-                  Add
+                <a href="/pages/create" className="flex items-center">
+                  เพิ่มเอกสาร
                 </a>
               </li>
-              <li className="flex items-center p-1 text-sm gap-x-2 text-white">
+              {/* <li className="flex items-center p-1 text-sm gap-x-2 text-white">
                 <a href="#" className="flex items-center">
                   Blocks
                 </a>
@@ -33,7 +33,7 @@ export const NavMenu = () => {
                 <a href="#" className="flex items-center">
                   Docs
                 </a>
-              </li>
+              </li> */}
               <li className="flex items-center p-1 text-sm gap-x-2 text-white">
                 <LogoutButton />
               </li>
